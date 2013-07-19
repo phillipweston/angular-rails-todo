@@ -1,0 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
+
+
+.container {
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 20px;
+}
+
+i {
+    margin-left: 10px;
+}
+

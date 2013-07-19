@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Angular Todo</title>
+</head>
+
+
+<body ng-app="todoList">
+
+<div>
+<div class="container" ng-controller="TodoCrtl">
+
+	<form class="form-search" ng-submit="addTodo(newTodo)">
+		<div class="input-append">
+		<input class="span3 search-query" placeholder="New Todo..." type="text" ng-model="newTodo">
+		<button class="btn" type="submit">Add Todo</button>
+		</div>
+	</form>
+
+	<table class="table table-hover">
+		<tr ng-repeat="todo in todos |orderBy:'id'" ng-class="{info: todo.status}">
+			<td ng-click="markDone(todo)">
+				{{todo.text}}<i ng-class="{'icon-ok': todo.status}"></i>
+			</td>
+			<td>
+				<button class="btn btn-danger" ng-click="deleteTodo(todo)">
+					Delete
+				</button>
+			</td>
+
+		</tr>
+	</table>
+
+</div>
+
+
+
+</body>
+</html>
